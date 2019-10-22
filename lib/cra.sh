@@ -1,11 +1,13 @@
 usage_crash() {
-	echo -e "Usage:\n"
+    cat <<EOF
+Usage:
 
-	echo -e "crash begin\t\t\t\tInitialize crash for current shell session"
-	echo -e "crash do <command> [<arg> [<arg>...]]\tSoft assert command"
-	echo -e "crash end\t\t\t\tEvaluate assertions\n"
+crash begin                            Initialize crash for current shell session
+crash do <command> [<arg> [<arg>...]]  Soft assert command
+crash end                              Evaluate assertions
 
-	echo -e "crash help\t\t\t\tShow usage information"
+crash help                             Show usage information
+EOF
 }
 
 crash() {
