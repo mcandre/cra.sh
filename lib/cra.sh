@@ -1,3 +1,5 @@
+#!/bin/sh
+
 usage_crash() {
     cat <<EOF
 Usage:
@@ -28,7 +30,8 @@ crash() {
                 return 1
             fi
 
-            "${@:2}" || export CRASH_STATUS=1
+            shift
+            "$@" || export CRASH_STATUS=1
             ;;
     	end)
             if [ "$CRASH_STATUS" = '1' ]; then
