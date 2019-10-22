@@ -25,7 +25,7 @@ cra.sh is safe to use inside of strict execution contexts like `&&` and `set -eE
 
 # RUNTIME REQUIREMENTS
 
-* a POSIXy shell (bash, zsh, ksh, dash, posh, etc.)
+* a bash-derived shell (bash, zsh, ksh, dash, posh, etc.)
 
 # INSTALL + IMPORT
 

@@ -1,5 +1,3 @@
-#!/bin/sh
-
 usage_crash() {
 	echo -e "Usage:\n"
 
@@ -28,7 +26,7 @@ crash() {
                 return 1
             fi
 
-            ${@:2} || export CRASH_STATUS=1
+            "${@:2}" || export CRASH_STATUS=1
             ;;
     	end)
             if [ "$CRASH_STATUS" = '1' ]; then
