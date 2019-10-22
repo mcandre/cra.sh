@@ -29,3 +29,7 @@ crash performs a sequence of customizable commands and remembers whether any com
 
 1. Clone crash.
 2. `. <path-to-clone>/lib/cra.sh`
+
+# LICENSE
+
+FreeBSD
