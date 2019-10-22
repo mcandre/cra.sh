@@ -21,6 +21,8 @@ $ crash end; echo "$?"
 
 crash performs a sequence of customizable commands and remembers whether any commands failed. This is useful for linter suites, where it is often desirable to emit all warnings together, rather than terminating early on the first failure.
 
+crash is safe to use inside of strict execution contexts like `&&` and `set -eEuo pipefail`.
+
 # RUNTIME REQUIREMENTS
 
 * a POSIXy shell (bash, zsh, ksh, dash, posh, etc.)
