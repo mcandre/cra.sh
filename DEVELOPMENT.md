@@ -5,6 +5,7 @@
 * [stank](https://github.com/mcandre/stank) (e.g. `go get github.com/mcandre/stank/...`)
 * [shfmt](https://github.com/mvdan/sh) (e.g. `go get github.com/mvdan/sh/cmd/shfmt`)
 * [Python 3.8+](https://www.python.org/) (then `pip[3[.8]] install -r requirements-dev.txt`)
+* [Ruby 2.6.5+](https://www.ruby-lang.org/en/) (then `bundle install`)
 
 ## Recommended
 

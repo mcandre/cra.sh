@@ -8,6 +8,10 @@ bashate_task() {
     stank . | xargs bashate
 }
 
+shlint_task() {
+    stank . | xargs shlint
+}
+
 TASKS='test'
 
 if [ "$#" -gt 0 ]; then
@@ -22,9 +26,13 @@ for TASK in "$TASKS"; do
     bashate)
         bashate_task
         ;;
+    shlint)
+        shlint_task
+        ;;
     lint)
         shfmt_task &&
-            bashate_task
+            bashate_task &&
+            shlint_task
         ;;
     test)
         ./test.sh
