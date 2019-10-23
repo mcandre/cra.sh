@@ -41,3 +41,7 @@ See [DEVELOPMENT.md](DEVELOPMENT.md).
 # LICENSE
 
 FreeBSD
+
+# CREDITS
+
+* Inspired by `xargs` from [GNU findutils](https://www.gnu.org/software/findutils/)
