@@ -1,7 +1,11 @@
 #!/bin/sh
 
-shfmt_recursive() {
+shfmt_task() {
     stank . | xargs shfmt -w -i 4
+}
+
+bashate_task() {
+    stank . | xargs bashate
 }
 
 TASKS='test'
@@ -12,8 +16,15 @@ fi
 
 for TASK in "$TASKS"; do
     case "$TASK" in
+    shfmt)
+        shfmt_task
+        ;;
+    bashate)
+        bashate_task
+        ;;
     lint)
-        shfmt_recursive
+        shfmt_task &&
+            bashate_task
         ;;
     test)
         ./test.sh

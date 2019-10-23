@@ -1,8 +1,16 @@
 # BUILDTIME REQUIREMENTS
 
 * a POSIXy shell (sh, bash, zsh, ksh, ash, dash, posh, WLS/Git/Cygwin/MinGW/MSYS Bash, etc.)
+* [GNU findutils](https://www.gnu.org/software/findutils/)
 * [stank](https://github.com/mcandre/stank) (e.g. `go get github.com/mcandre/stank/...`)
 * [shfmt](https://github.com/mvdan/sh) (e.g. `go get github.com/mvdan/sh/cmd/shfmt`)
+* [Python 3.8+](https://www.python.org/) (then `pip[3[.8]] install -r requirements-dev.txt`)
+
+## Recommended
+
+* [direnv](https://direnv.net/)
+* [pyenv](https://github.com/pyenv/pyenv)
+* [gvm](https://github.com/moovweb/gvm)
 
 # LINT
 
