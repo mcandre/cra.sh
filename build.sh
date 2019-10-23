@@ -1,28 +1,42 @@
-#!/bin/sh
+#!/bin/bash
+set -eEuo pipefail
+
+DIR="${0%/*}"
 
 shfmt_task() {
-    stank . | xargs shfmt -w -i 4
+    stank "$DIR" |
+        xargs shfmt -w -i 4
 }
 
 bashate_task() {
-    stank . | xargs bashate
+    stank "$DIR" |
+        xargs bashate
 }
 
 shlint_task() {
-    stank . | xargs shlint
+    stank "$DIR" |
+        xargs shlint
 }
 
 checkbashisms_task() {
-    stank . | xargs checkbashisms -n -p
+    stank "$DIR" |
+        xargs checkbashisms -n -p
+}
+
+shellcheck_task() {
+    stank "$DIR" |
+        xargs shellcheck \
+            -e SC1090 \
+            -e SC1010
 }
 
 TASKS='test'
 
 if [ "$#" -gt 0 ]; then
-    TASKS="$@"
+    TASKS="$*"
 fi
 
-for TASK in "$TASKS"; do
+for TASK in $TASKS; do
     case "$TASK" in
     shfmt)
         shfmt_task
@@ -36,14 +50,18 @@ for TASK in "$TASKS"; do
     checkbashisms)
         checkbashisms_task
         ;;
+    shellcheck)
+        shellcheck_task
+        ;;
     lint)
-        shfmt_task &&
-            bashate_task &&
-            shlint_task &&
-            checkbashisms_task
+        shfmt_task
+        bashate_task
+        shlint_task
+        checkbashisms_task
+        shellcheck_task
         ;;
     test)
-        ./test.sh
+        "$DIR"/test.sh
         ;;
     *)
         echo "No such task: $TASK"
