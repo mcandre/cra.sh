@@ -30,7 +30,24 @@ shellcheck_task() {
             -e SC1010
 }
 
-TASKS='test'
+lint_task() {
+    shfmt_task
+    bashate_task
+    shlint_task
+    checkbashisms_task
+    shellcheck_task
+}
+
+test_task() {
+    "$DIR"/test.sh
+}
+
+build_task() {
+    lint_task
+    test_task
+}
+
+TASKS='build'
 
 if [ "$#" -gt 0 ]; then
     TASKS="$*"
@@ -54,14 +71,13 @@ for TASK in $TASKS; do
         shellcheck_task
         ;;
     lint)
-        shfmt_task
-        bashate_task
-        shlint_task
-        checkbashisms_task
-        shellcheck_task
+        lint_task
         ;;
     test)
-        "$DIR"/test.sh
+        test_task
+        ;;
+    build)
+        build_task
         ;;
     *)
         echo "No such task: $TASK"

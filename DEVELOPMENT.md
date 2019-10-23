@@ -15,6 +15,12 @@
 * [pyenv](https://github.com/pyenv/pyenv)
 * [gvm](https://github.com/moovweb/gvm)
 
+# BUILD: LINT + TEST
+
+```console
+$ ./build.sh
+```
+
 # LINT
 
 ```console
