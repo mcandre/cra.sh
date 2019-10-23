@@ -12,6 +12,10 @@ shlint_task() {
     stank . | xargs shlint
 }
 
+checkbashisms_task() {
+    stank . | xargs checkbashisms -n -p
+}
+
 TASKS='test'
 
 if [ "$#" -gt 0 ]; then
@@ -29,10 +33,14 @@ for TASK in "$TASKS"; do
     shlint)
         shlint_task
         ;;
+    checkbashisms)
+        checkbashisms_task
+        ;;
     lint)
         shfmt_task &&
             bashate_task &&
-            shlint_task
+            shlint_task &&
+            checkbashisms_task
         ;;
     test)
         ./test.sh
