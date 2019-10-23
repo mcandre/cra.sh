@@ -17,6 +17,8 @@ $ crash end; echo "$?"
 1
 ```
 
+See [tests/](tests) for more examples.
+
 # ABOUT
 
 cra.sh performs a sequence of customizable commands and remembers whether any commands failed. This is useful for linter suites, where it is often desirable to emit all warnings together, rather than terminating early on the first failure.
@@ -31,6 +33,10 @@ cra.sh is safe to use inside of strict execution contexts like `&&` and `set -eE
 
 1. Clone the cra.sh repository.
 2. `. <path-to-clone>/lib/cra.sh`
+
+# CONTRIBUTING
+
+See [DEVELOPMENT.md](DEVELOPMENT.md).
 
 # LICENSE
 
