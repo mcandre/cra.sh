@@ -3,6 +3,7 @@ set -eEuo pipefail
 IFS=$'\n\t '
 
 DIR="${0%/*}"
+# shellcheck source=/dev/null
 . "${DIR}/../lib/cra.sh"
 
 STATUS_EXPECTED=1

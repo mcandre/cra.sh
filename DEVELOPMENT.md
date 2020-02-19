@@ -2,33 +2,31 @@
 
 * [GNU bash](https://www.gnu.org/software/bash/)
 * [GNU findutils](https://www.gnu.org/software/findutils/)
+* [vast](http://github.com/mcandre/vast)
+* [shfmt](https://github.com/mvdan/sh) (e.g. `GO111MODULE=on go get mvdan.cc/sh/v3/cmd/shfmt`)
+* [bashate](https://pypi.python.org/pypi/bashate/0.5.1)
+* [shlint](https://rubygems.org/gems/shlint)
 * [checkbashisms](https://sourceforge.net/projects/checkbaskisms/)
 * [ShellCheck](https://hackage.haskell.org/package/ShellCheck)
 * [stank](https://github.com/mcandre/stank) (e.g. `go get github.com/mcandre/stank/...`)
-* [shfmt](https://github.com/mvdan/sh) (e.g. `go get github.com/mvdan/sh/cmd/shfmt`)
-* [Python 3.8+](https://www.python.org/) (then `pip[3[.8]] install -r requirements-dev.txt`)
-* [Ruby 2.6.5+](https://www.ruby-lang.org/en/) (then `bundle install`)
+* [slick](https://github.com/mcandre/slick) (e.g. `go get github.com/mcandre/slick/....`)
 
-## Recommended
+# DEVELOPMENT
 
-* [direnv](https://direnv.net/)
-* [pyenv](https://github.com/pyenv/pyenv)
-* [gvm](https://github.com/moovweb/gvm)
-
-# BUILD: LINT + TEST
+## Build: Lint and Test
 
 ```console
-$ ./build.sh
+$ vast
 ```
 
-# LINT
+## Test
 
 ```console
-$ ./build.sh lint
+$ vast itest
 ```
 
-# TEST
+## Lint
 
 ```console
-$ ./build.sh test
+$ vast lint
 ```

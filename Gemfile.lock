@@ -7,10 +7,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  shlint (= 0.1.6)
-
-RUBY VERSION
-   ruby 2.6.5p114
+  shlint (~> 0.1.6)
 
 BUNDLED WITH
    1.17.3
