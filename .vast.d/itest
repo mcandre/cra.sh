@@ -4,7 +4,7 @@ IFS=$'\n\t '
 
 DIR="${0%/*}"
 
-find "${DIR}/../tests" -type f -name '*.sh' -print0 |
+find "${DIR}/../tests" -type f -print0 |
     while IFS= read -r -d '' f; do
         "$f"
     done
