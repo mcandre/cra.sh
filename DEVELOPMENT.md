@@ -1,6 +1,6 @@
 # BUILDTIME REQUIREMENTS
 
-* [GNU bash](https://www.gnu.org/software/bash/)
+* [coreutils](https://www.gnu.org/software/coreutils/)
 * [GNU findutils](https://www.gnu.org/software/findutils/)
 * [vast](http://github.com/mcandre/vast)
 * [shfmt](https://github.com/mvdan/sh) (e.g. `GO111MODULE=on go get mvdan.cc/sh/v3/cmd/shfmt`)

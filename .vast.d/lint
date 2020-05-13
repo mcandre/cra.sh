@@ -4,6 +4,6 @@ set -eu
 
 v-shfmt
 v-bashate
-# v-checkbashisms
+v-checkbashisms
 v-shellcheck
 v-funk
