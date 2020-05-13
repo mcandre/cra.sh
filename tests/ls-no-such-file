@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 unset IFS
-set -eEuo pipefail
+set -euf
 
 DIR="${0%/*}"
 # shellcheck source=/dev/null
