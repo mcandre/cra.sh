@@ -10,7 +10,7 @@ STATUS_EXPECTED=0
 STATUS_OBSERVED=0
 
 crash begin
-crash do sh -c "echo '' >/dev/null"
+crash exec sh -c "echo '' >/dev/null"
 crash end ||
     STATUS_OBSERVED="$?"
 

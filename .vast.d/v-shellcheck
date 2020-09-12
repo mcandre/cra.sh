@@ -1,6 +1,7 @@
 #!/bin/sh
 unset IFS
-set -eu
+set -euf
 
-stank . |
-    xargs shellcheck -e SC1010
+stank -exInterp zsh . |
+    grep -v node_modules |
+    xargs shellcheck

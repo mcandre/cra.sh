@@ -24,7 +24,7 @@ crash() {
     begin)
         export CRASH_STATUS='0'
         ;;
-    do)
+    exec)
         if [ "$#" -lt 2 ]; then
             usage_crash
             return 1

@@ -10,8 +10,8 @@ STATUS_EXPECTED=1
 STATUS_OBSERVED=0
 
 crash begin
-crash do sh -c 'ls 1>/dev/null'
-crash do sh -c 'ls no_such_file 2>/dev/null'
+crash exec sh -c 'ls 1>/dev/null'
+crash exec sh -c 'ls no_such_file 2>/dev/null'
 crash end ||
     STATUS_OBSERVED="$?"
 

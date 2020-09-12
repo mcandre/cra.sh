@@ -7,10 +7,10 @@
 ```console
 $ crash begin
 
-$ crash do ls
+$ crash exec ls
 README.md lib test
 
-$ crash do ls no_such_file
+$ crash exec ls no_such_file
 ls: no_such_file: No such file or directory
 
 $ crash end; echo "$?"
